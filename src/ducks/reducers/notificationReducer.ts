@@ -12,13 +12,13 @@ const notificationReducer = (
   switch (action.type) {
     case 'NEW-NOTIFICATION':
       return {
-        message: action.payload?.message,
-        status: action.payload?.status,
+        message: action.payload.message,
+        status: action.payload.status,
       }
     case 'CLEAR-NOTIFICATION':
       return {
-        message: null,
-        status: null,
+        message: action.payload.message,
+        status: action.payload.status,
       }
     default:
       return state

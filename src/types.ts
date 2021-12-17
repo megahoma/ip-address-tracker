@@ -4,12 +4,12 @@ export interface State {
 }
 
 export type NotificationState = {
-  message: string | null | undefined
-  status: number | null | undefined
+  message: string | null
+  status: number | null
 }
 export type NotificationAction = {
   type: string
-  payload?: NotificationState
+  payload: NotificationState
 }
 export type DispatchNotificationType = (
   args: NotificationAction
