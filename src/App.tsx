@@ -3,17 +3,18 @@ import { useDispatch } from 'react-redux'
 import { setGeo } from './ducks/actions/geoAction'
 
 import { Notification } from './components/Notification/Notification'
+import Header from './components/Header'
 const App = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(setGeo(null))
+    dispatch(setGeo(null, false))
   }, [dispatch])
 
   return (
     <div className="App">
       <Notification />
-      ip-address-tracker
+      <Header />
     </div>
   )
 }
