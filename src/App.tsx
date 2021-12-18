@@ -4,6 +4,8 @@ import { setGeo } from './ducks/actions/geoAction'
 
 import { Notification } from './components/Notification/Notification'
 import Header from './components/Header'
+import GeoInfo from './components/GeoInfo'
+
 const App = () => {
   const dispatch = useDispatch()
 
@@ -15,6 +17,7 @@ const App = () => {
     <div className="App">
       <Notification />
       <Header />
+      <GeoInfo />
     </div>
   )
 }
