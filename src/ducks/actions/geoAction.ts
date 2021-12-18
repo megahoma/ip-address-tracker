@@ -14,23 +14,16 @@ const setGeo = (
   return async (dispatch) => {
     try {
       const res = await axios.get(
-        `${baseUrl}&${flagDomaine ? 'domain' : 'ipAddress'}=${
-          ip === null ? '' : ip
+        `${baseUrl}${
+          ip === null ? '' : flagDomaine ? `&domain=${ip}` : `&ipAddress=${ip}`
         }`
       )
-
       dispatch({
         type: 'SET-GEO',
         payload: res.data,
       })
     } catch (err: any) {
-      dispatch(
-        setNotification(
-          err.response.data.message || 'Ошибка',
-          err.response.status || 400,
-          3
-        )
-      )
+      dispatch(setNotification('Ошибка', 400, 3))
     }
   }
 }
