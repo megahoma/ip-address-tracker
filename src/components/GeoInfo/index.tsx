@@ -9,7 +9,7 @@ const GeoInfo = () => {
 
   return (
     <Container>
-      <Wrapper className="card-results">
+      <Wrapper>
         <Card>
           <TitleCard>Ip Address</TitleCard>
           <InfoCard>{geo?.ip}</InfoCard>

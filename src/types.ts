@@ -40,7 +40,7 @@ export type GeoState = {
     vpn: boolean
     tor: boolean
   }
-} | null
+}
 export type GeoAction = {
   type: string
   payload: GeoState
