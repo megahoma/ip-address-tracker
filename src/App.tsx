@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { setGeo } from './ducks/actions/geoAction'
 
-import { Notification } from './components/Notification'
+import { Notification } from './components/Notification/Notification'
 const App = () => {
   const dispatch = useDispatch()
 
